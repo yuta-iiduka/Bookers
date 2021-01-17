@@ -1,0 +1,22 @@
+<section class = "book_page">
+  <!--メッセージ部分-->
+  <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <!-- 本の紹介部分-->
+  <div class="book_title">
+    <p class="bold-text">Title: <p><p><%= @book.title %></p>
+  </div>
+  <div class="book_body">
+    <p class="bold-text">Body: </p><p><%= @book.body %></p>
+  </div>
+</section>
+
+<!-- ページ移動部分-->
+<div class="pagelink">
+  <p><%= link_to "Edit", edit_book_path(@book.id) %></p>
+  <p>|</p>
+  <p><%= link_to "Back", books_path %></p>
+</div>

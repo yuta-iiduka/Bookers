@@ -1,0 +1,37 @@
+<!-- header -->
+<header>
+  <h1>Books</h1>
+    <table class="all_books">
+      <tr>
+        <th class="books_title">Title</th>
+        <th class="books_body">Body</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><%= link_to "Show", book_path(book.id) %></td>
+        <td><%= link_to "Edit", edit_book_path(book.id) %></td>
+        <td><%= link_to "Destroy", book_path(book.id),method: :delete, "data-confirm" => 'Are you sure ?' %></td>
+      </tr>
+      <% end %>
+    </table>
+</header>
+
+<!--入力フォーム-->
+<div class="new_book">
+  <h3>New book</h3>
+  <!-- form_with部分-->
+  <%= form_with model: @book, url:books_path, local:true do |f| %>
+  <!--エラーメッセージ部分-->
+  <%= render 'layouts/error_messages', model: f.object %>
+    <p>Title<p>
+      <p><%= f.text_field :title %></p>
+    <p>Body<p>
+      <p><%= f.text_area :body %></p>
+      <p><%= f.submit 'Create Book' %></p>
+  <% end %>
+</div>

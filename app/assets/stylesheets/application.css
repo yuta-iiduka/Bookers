@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*topページ*/
+.welcom_caption{
+  margin: 5%;
+}
+.site_explanation{
+  margin: 10%;
+}
+
+header{
+  margin:5%;
+}
+
+/*index-table*/
+.all_books{
+  table-layout:fixed;
+  word-wrap:break-word;
+
+}
+.books_title{
+  width:20%;
+}
+.books_body{
+  width:70%;
+}
+.new_book,.edit_book {
+  padding-bottom:5px;
+  margin:5%;
+}
+
+.bold-text {
+  font-weight:bold;
+}
+
+.book_page{
+  margin-left:10%;
+}
+.book_title p {
+  display:inline-block;
+}
+.book_body p {
+  display:inline-block;
+}
+
+.pagelink {
+  text-align:cneter;
+  padding-top:50px;
+}
+.pagelink p{
+  display:inline-block;
+  margin:0 5px;
+
+}
+
+.flash{
+  color: yellowgreen;
+  /*background-color:green;*/
+}
+
+/*エラーメッセージの色*/
+.error_messages_box{
+  width:75%;
+  vertical-align:top;
+  border:2px solid;
+  border-color:red;
+  background-color:#e8e8e8;
+}
+
+.error_title{
+  background-color:#a00000;
+  color:#fff;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
